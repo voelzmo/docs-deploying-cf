@@ -206,5 +206,8 @@ Next: [Deploying Cloud Foundry on AWS](deploy_aws_cf.html)# For a multi AZ "real
 
 ## create blobstores/s3 buckets
 
+## create load balancer
+### create self signed cert for load balancer
+
 
 ###Go on to [Deploying Cloud Foundry on AWS](./deploy_aws_cf.html) or [Return to Index](./index.html)
