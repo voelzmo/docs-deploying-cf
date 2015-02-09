@@ -47,6 +47,7 @@ To configure your AWS account for Cloud Foundry:
 * [Update the MicroBOSH Security Group](#update-mibo-sec-group)
 * [Create a Subnet for Cloud Foundry Deployment](#create-cf-subnet)
 * [Configure your Cloud Foundry System Domain](#config-cf-dns)
+* [Multi-AZ full deployment prep](#config-cf-for-multi-az-deploy)
 
 <p class="note"><strong>Note</strong>: Ensure that "N. Virginia" is selected as the AWS Region.</p>
 
@@ -180,20 +181,17 @@ If you do not have a domain, you can use 0.0.0.0.xip.io for your System Domain a
 
 1. Update `REPLACE_WITH_SSL_CERT_AND_KEY` in your manifest with the value from the above command.
 
-Back to [Deploying to AWS](aws_steps.html)
 
-Next: [Deploying Cloud Foundry on AWS](deploy_aws_cf.html)# For a multi AZ "real" CF deploy on AWS you'll need the following as well
+###<a id="config-cf-for-multi-az-deploy"></a> Configure AWS for multi AZ deploy, with RDS, Load Balancer
 
-## Create Subnets
+#### Create additonal Subnets
 - cf1/cf2
 - cf_elb1/cf_elb2
 - rds_az1/rds_az2
 
 ## Create Internet gateway
 
-## Create NatBox
-
-## Create security groups
+## Create additional security group
 - in the VPC
 - web that gets connected to the internet gateway and route tables
 
@@ -210,4 +208,6 @@ Next: [Deploying Cloud Foundry on AWS](deploy_aws_cf.html)# For a multi AZ "real
 ### create self signed cert for load balancer
 
 
-###Go on to [Deploying Cloud Foundry on AWS](./deploy_aws_cf.html) or [Return to Index](./index.html)
+Back to [Deploying to AWS](aws_steps.html)
+
+Next: [Deploying Cloud Foundry on AWS](deploy_aws_cf.html)
